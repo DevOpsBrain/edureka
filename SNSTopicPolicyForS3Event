@@ -1,0 +1,20 @@
+{
+   "Version": "2008-10-17",
+   "Id": "s3-sns",
+   "Statement": [
+      {
+         "Sid": "s3-sns-sid",
+         "Effect": "Allow",
+         "Principal": {
+            "AWS": "*"
+         },
+         "Action": "SNS:Publish",
+         "Resource": "<SNS Topic ARN>",
+         "Condition": {
+            "ArnLike": {
+               "aws:SourceArn": "<Bucket Name>"
+            }
+         }
+      }
+   ]
+}
