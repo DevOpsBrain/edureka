@@ -1,0 +1,8 @@
+#!/bin/bash
+sudo yum update -y
+sudo yum install -y httpd
+sudo service httpd start
+sudo chkconfig httpd on
+sudo touch /var/www/html/index.html
+az=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone/)
+sudo echo "<html><body><h1>Welcome to $az</h1></body></html>" >>/var/www/html/index.html
