@@ -1,0 +1,13 @@
+AWS CLI Command to Launch an EC2 Instance: 
+
+Syntax:
+aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-xxxxxxxx --subnet-id subnet-xxxxxxxx
+
+Example: Launches an EC2 Instance
+aws ec2 run-instances --image-id ami-5583d42f --count 1 --instance-type t2.micro --key-name abc --security-group-ids  --subnet-id subnet-6b5b2d31
+
+Example: Terminates an Instance
+aws ec2 terminate-instances --instance-ids i-0de2f13432c4c956b
+
+Example: Creates a snapshot
+aws ec2 create-snapshot --volume-id vol-0381bae6bed7e7dba --description "This is my root volume snapshot."
