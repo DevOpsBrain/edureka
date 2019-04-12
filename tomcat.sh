@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 sudo yum install java-1.8.0
 sudo cd /usr/local
 sudo wget http://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
